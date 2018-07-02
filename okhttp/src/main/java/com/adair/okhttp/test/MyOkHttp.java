@@ -1,9 +1,5 @@
 package com.adair.okhttp.test;
 
-import com.adair.okhttp.OkHttpRequest;
-
-import java.util.Map;
-
 /**
  * 请求入口
  * <p>
@@ -13,9 +9,6 @@ import java.util.Map;
  * @version v1.0
  */
 public class MyOkHttp {
-
-
-
 
     private MyOkHttp() {
     }

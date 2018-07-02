@@ -8,7 +8,7 @@ package com.adair.okhttp.test;
  * @author XuShuai
  * @version v1.0
  */
-public abstract class CallBack implements ICallBack {
+public abstract class CallBack<T> implements ICallBack<T> {
 
     @Override
     public void onStart() {

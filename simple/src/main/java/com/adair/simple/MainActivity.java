@@ -14,6 +14,9 @@ import com.adair.okhttp.DownloadManager;
 import com.adair.okhttp.DownloadRequest;
 import com.adair.okhttp.OkHttpManager;
 import com.adair.okhttp.OkHttpRequest;
+import com.adair.okhttp.test.GetRequest;
+import com.adair.okhttp.test.OkHttpClientManager;
+import com.adair.okhttp.test.Request;
 import com.android.base.ActivityBase;
 
 import okhttp3.Call;
@@ -42,6 +45,7 @@ public class MainActivity extends ActivityBase implements View.OnClickListener {
         findViewById(R.id.button3).setOnClickListener(this);
         findViewById(R.id.button4).setOnClickListener(this);
         mProgressBar1 = findViewById(R.id.progressBar1);
+        Request request = new Request(OkHttpClientManager.getDefaultOkHttpClient(false));
     }
 
     @Override
