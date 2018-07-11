@@ -1,4 +1,4 @@
-package com.adair.okhttp.test;
+package com.adair.okhttp.callback;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import okhttp3.Response;
  * @author XuShuai
  * @version v1.0
  */
-public interface ICallBack<T> {
+public interface ICallback {
 
     /**
      * 请求开始前调用,此方法必定会被执行
@@ -24,22 +24,15 @@ public interface ICallBack<T> {
      *
      * @param e 错误Exception
      */
-    void onFailure(IOException e);
+     void onFailure(IOException e);
 
     /**
-     * 请求响应错误(请求服务器有响应,响应结果不是正确预期)
+     * 请求响应成功(请求服务器有响应)
      *
      * @param code     响应code
      * @param response 响应结果
      */
-    void onError(int code, Response response);
-
-    /**
-     * 请求成功
-     *
-     * @param t 返回结果
-     */
-    void onSuccess(T t);
+    void onSuccess(int code, Response response);
 
     /**
      * 请求结束,此方法必定会被执行
