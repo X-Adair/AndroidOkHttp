@@ -65,6 +65,7 @@ public class OkHttpDownloadCallback implements Callback {
         } catch (IOException e) {
             failureRunOnUiThread(callback, e);
         }
+        OkHttp.removeDownloadCall(call);
     }
 
     public void failureRunOnUiThread(final DownloadCallback callback, final IOException e) {

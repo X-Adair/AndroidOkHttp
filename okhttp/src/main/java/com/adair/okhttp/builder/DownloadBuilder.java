@@ -7,7 +7,7 @@ import android.util.Log;
 import com.adair.okhttp.OkHttp;
 import com.adair.okhttp.callback.DownloadCallback;
 import com.adair.okhttp.callback.OkHttpDownloadCallback;
-import com.adair.okhttp.response.DownloadInterceptor;
+import com.adair.okhttp.interceptor.DownloadInterceptor;
 
 import java.io.File;
 import java.io.IOException;

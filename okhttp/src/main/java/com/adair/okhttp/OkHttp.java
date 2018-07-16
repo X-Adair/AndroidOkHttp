@@ -9,6 +9,7 @@ import android.util.Log;
 import com.adair.okhttp.builder.DownloadBuilder;
 import com.adair.okhttp.builder.GetBuilder;
 import com.adair.okhttp.builder.PostBuilder;
+import com.adair.okhttp.builder.UploadBuilder;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -100,6 +101,12 @@ public class OkHttp {
         downloadCall.add(call);
     }
 
+    public static void removeDownloadCall(Call call) {
+        if (downloadCall != null) {
+            downloadCall.remove(call);
+        }
+
+    }
 
     /**
      * 调用Get请求
@@ -124,6 +131,14 @@ public class OkHttp {
     public static DownloadBuilder download() {
         checkOkHttpInit();
         return new DownloadBuilder(okHttpClient);
+    }
+
+    /**
+     * 带参数上传
+     */
+    public static UploadBuilder upload() {
+        checkOkHttpInit();
+        return new UploadBuilder(okHttpClient);
     }
 
 

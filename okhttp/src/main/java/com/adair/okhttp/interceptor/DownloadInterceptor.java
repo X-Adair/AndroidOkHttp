@@ -1,6 +1,7 @@
-package com.adair.okhttp.response;
+package com.adair.okhttp.interceptor;
 
 import com.adair.okhttp.callback.DownloadCallback;
+import com.adair.okhttp.response.DownloadResponseBody;
 
 import java.io.IOException;
 
