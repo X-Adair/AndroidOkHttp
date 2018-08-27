@@ -2,7 +2,6 @@ package com.adair.okhttp.builder;
 
 import android.text.TextUtils;
 
-import com.adair.okhttp.callback.ICallback;
 import com.adair.okhttp.callback.OkHttpCallBack;
 import com.adair.okhttp.callback.UploadCallback;
 import com.adair.okhttp.requestBody.UploadRequestBody;

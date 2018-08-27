@@ -4,7 +4,6 @@ package com.adair.okhttp;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.adair.okhttp.builder.DownloadBuilder;
 import com.adair.okhttp.builder.GetBuilder;
@@ -72,6 +71,11 @@ public class OkHttp {
         return commonParams;
     }
 
+    /**
+     * 添加公共参数
+     * @param key 参数名
+     * @param value 参数值
+     */
     public static void addCommonParams(String key, String value) {
         if (commonParams == null) {
             commonParams = new LinkedHashMap<>();
@@ -79,10 +83,19 @@ public class OkHttp {
         commonParams.put(key, value);
     }
 
+    /**
+     * 添加公共参数
+     * @param params 参数Map键值对
+     */
     public static void commonParams(Map<String, String> params) {
         commonParams = params;
     }
 
+    /**
+     * 添加公共请求头信息
+     * @param key 请求头名
+     * @param value 请求头值
+     */
     public static void addCommonHeader(String key, String value) {
         if (commonHeaders == null) {
             commonHeaders = new LinkedHashMap<>();
@@ -90,6 +103,10 @@ public class OkHttp {
         commonHeaders.put(key, value);
     }
 
+    /**
+     * 批量添加公共请求头信息,会覆盖addCommonHeader()方法添加的请求头信息
+     * @param headers 请求头信息
+     */
     public static void commonHeader(Map<String, String> headers) {
         commonHeaders = headers;
     }

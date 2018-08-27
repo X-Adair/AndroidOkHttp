@@ -3,15 +3,12 @@ package com.adair.okhttp.builder;
 import android.support.annotation.NonNull;
 
 import com.adair.okhttp.OkHttp;
-import com.adair.okhttp.callback.ICallback;
 
-import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import okhttp3.Headers;
 import okhttp3.Request;
-import okhttp3.Response;
 
 /**
  * 基本的请求构建类
