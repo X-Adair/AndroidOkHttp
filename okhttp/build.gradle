@@ -21,7 +21,7 @@ apply from: "https://raw.githubusercontent.com/X-Adair/Jcenter/master/bintray.gr
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:support-annotations:28.0.0-rc01'
+    implementation 'com.android.support:support-annotations:28.0.0-rc02'
 
     api 'com.squareup.okhttp3:okhttp:3.11.0'
     api 'com.google.code.gson:gson:2.8.5'
